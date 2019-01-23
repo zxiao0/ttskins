@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <title></title>   
+    <link rel="stylesheet" type="text/css" href="static/css/app.css" /> 
+</head>
+<body>
+  <div class="header" id="header">
+    <div class="header-bg">
+      <div class="logo fl"><a href="javascript:;"><img src="static/images/comm/logo.png?v=1548150312992"></a></div> 
+      <div class="menu fl">
+
+          <a href="javascript:;" class="active">
+              <span class="img">
+                  <span class="icon boxIcon"></span>
+              </span>
+              <span>箱子</span>
+          </a>
+
+          <a href="javascript:;">
+              <span class="img">
+                  <span class="icon CFIcon"></span>
+              </span>
+              <span>众筹</span>
+          </a>
+          <a href="javascript:;">
+              <span class="img">
+                  <span class="icon rollIcon"></span>
+              </span>
+              <span>ROLL</span>
+          </a>
+          <a href="javascript:;">
+              <span class="img">
+                  <span class="icon MALLIcon"></span>
+              </span>
+              <span>商城</span>
+          </a>
+      </div>
+      <div class="shortcut fr">
+          <div class="language fl">
+              <div class="selectCa">
+                  
+                  <div class="val" @click="show_lang()"><img src="static/images/comm/chinese.jpg?v=1548150312992"></div>
+                  <div class="optionList" v-show="islang">
+                      <div class="option" @click="set_lang('en')"><img src="static/images/comm/english.jpg"></div>
+                      <div class="option" @click="set_lang('zh-hans')"><img src="static/images/comm/chinese.jpg?v=1548150312992"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="user fl">
+              
+              <div class="discard">
+                  <a href="javascript:void 0;" id="login_page">登录</a>
+                  <a href="javascript:void 0;" id="reg_page">注册</a>
+              </div>
+              
+          </div>
+      </div>
+    </div>
+  </div>
+  <div id="register" class="member">
+   
+    
+    <div class="member-warp">
+      <div class="member-form">
+        <div class="member-formbg">
+          <h2>注 册</h2>
+          <form action="">
+            <div class="form-info"><input placeholder="请输入您的邮箱账号" type="text"></div>
+            <div class="error"><i></i>输入错误</div>
+            <div class="form-info yzm"><input placeholder="请输入验证码" type="text"><a href="javascript:;" class="yzm-btn">发送验证码</a></div>
+            <div class="error"></div>
+            <div class="form-info"><input placeholder="请输入密码，6-20位字符" type="password"></div>
+            <div class="error"></div>
+            <div class="form-info"><input placeholder="请输入新密码确认" type="password"></div>
+            <div class="error"></div>
+            <div class="form-info"><input placeholder="请输入推广码（选填）" type="text"></div>
+            <div class="error"></div>
+            <div class="check"><input type="checkbox" id="check_yx"><label for="check_yx"><i></i></label>我已经阅读并同意<a href="javascript:;">《v8gamer服务协议》</a></div>
+            <div class="btn"><a  href="javascript:;">注 册</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="footer">
+      <div class="logo fl"><a href="/"><img src="static/images/comm/logo.png?v=1548150312992"></a></div>
+      <div class="entrance fr">
+          <a class="help" href="javascript:;"><i></i>帮助中心</a>
+          <a class="terms" href="javascript:;"><i></i>使用条款</a>
+      </div>
+      <div class="payType fl">
+          <span class="tit"><i></i>支付方式：</span>
+          <span class="type">
+              <i class="zfb"></i>
+              <i class="wx"></i>
+              <i class="yl"></i>
+          </span>
+      </div>
+  </div>
+  <script src="static/js/vendor/vue-2.4.2.js?v=1548150312992"></script> 
+  <script src="static/js/vendor/axios.min.js?v=1548150312992"></script> 
+  <script src="static/js/vendor/vee-validate.js?v=1548150312992"></script> 
+  <script src="static/js/vendor/jquery-3.2.1.js?v=1548150312992"></script> 
+  <script src="static/js/comm.js?v=1548150312992"></script>
+  <script> 
+ 
+  
+  new Vue ({
+      el: "#register",
+      components: {
+      },
+      data: function() {
+          return {
+            isAjaxLock:false
+          }
+      }, 
+      extends: {
+
+      },
+      methods: {
+      }
+  })
+  </script>
+</body>
+</html>
