@@ -11,7 +11,7 @@
 <body>
   <div class="header" id="header">
     <div class="header-bg">
-      <div class="logo fl"><a href="javascript:;"><img src="static/images/comm/logo.png?v=1548666961554"></a></div> 
+      <div class="logo fl"><a href="javascript:;"><img src="static/images/comm/logo.png?v=1548842010625"></a></div> 
       <div class="menu fl">
 
           <a href="javascript:;" class="active">
@@ -44,10 +44,10 @@
           <div class="language fl">
               <div class="selectCa">
                   
-                  <div class="val" @click="show_lang()"><img src="static/images/comm/chinese.jpg?v=1548666961554"></div>
+                  <div class="val" @click="show_lang()"><img src="static/images/comm/chinese.jpg?v=1548842010625"></div>
                   <div class="optionList" v-show="islang">
                       <div class="option" @click="set_lang('en')"><img src="static/images/comm/english.jpg"></div>
-                      <div class="option" @click="set_lang('zh-hans')"><img src="static/images/comm/chinese.jpg?v=1548666961554"></div>
+                      <div class="option" @click="set_lang('zh-hans')"><img src="static/images/comm/chinese.jpg?v=1548842010625"></div>
                   </div>
               </div>
           </div>
@@ -76,7 +76,7 @@
           <a href="javascript:;">ADNF金币</a>
         </div>
         <div class="search-box">
-          <p class="sort-box"><span class="sort-img"><span class="active"></span><span class="sort-desc"></span></span>价格排序</p>
+          <p @click="sort()" class="sort-box"><span class="sort-img"><span :class="{'active':isasc}"></span><span  :class="{'active':!isasc}"></span></span>价格排序</p>
           <span class="pr-txt mr10">价格区间</span>
           <span class="mr10"><input class="ivu-input-number-input "> <span class="ml10 mr10">-</span> <input class="ivu-input-number-input"></span>
           <a class="search-btn" href="javascript:;">确定</a>
@@ -88,7 +88,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img01.png?v=1548666961554">
+                  <img src="static/images/upload/list02-img01.png?v=1548842010625">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -98,7 +98,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img02.png?v=1548666961554">
+                  <img src="static/images/upload/list02-img02.png?v=1548842010625">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -108,7 +108,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img03.png?v=1548666961554">
+                  <img src="static/images/upload/list02-img03.png?v=1548842010625">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -118,7 +118,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img04.png?v=1548666961554">
+                  <img src="static/images/upload/list02-img04.png?v=1548842010625">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -128,7 +128,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img05.png?v=1548666961554">
+                  <img src="static/images/upload/list02-img05.png?v=1548842010625">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -138,7 +138,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img06.png?v=1548666961554">
+                  <img src="static/images/upload/list02-img06.png?v=1548842010625">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -148,7 +148,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img07.png?v=1548666961554">
+                  <img src="static/images/upload/list02-img07.png?v=1548842010625">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -158,7 +158,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img08.png?v=1548666961554">
+                  <img src="static/images/upload/list02-img08.png?v=1548842010625">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -168,7 +168,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img07.png?v=1548666961554">
+                  <img src="static/images/upload/list02-img07.png?v=1548842010625">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -177,7 +177,7 @@
               <div class="bg"></div>
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponImg">
-                  <img src="static/images/upload/card.png?v=1548666961554">
+                  <img src="static/images/upload/card.png?v=1548842010625">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -190,7 +190,7 @@
 
 
   <div class="footer">
-      <div class="logo fl"><a href="/"><img src="static/images/comm/logo.png?v=1548666961554"></a></div>
+      <div class="logo fl"><a href="/"><img src="static/images/comm/logo.png?v=1548842010625"></a></div>
       <div class="entrance fr">
           <a class="help" href="javascript:;"><i></i>帮助中心</a>
           <a class="terms" href="javascript:;"><i></i>使用条款</a>
@@ -204,11 +204,11 @@
           </span>
       </div>
   </div>
-  <script src="static/js/vendor/vue-2.4.2.js?v=1548666961554"></script> 
-  <script src="static/js/vendor/axios.min.js?v=1548666961554"></script> 
-  <script src="static/js/vendor/vee-validate.js?v=1548666961554"></script> 
-  <script src="static/js/vendor/jquery-3.2.1.js?v=1548666961554"></script> 
-  <script src="static/js/comm.js?v=1548666961554"></script>
+  <script src="static/js/vendor/vue-2.4.2.js?v=1548842010625"></script> 
+  <script src="static/js/vendor/axios.min.js?v=1548842010625"></script> 
+  <script src="static/js/vendor/vee-validate.js?v=1548842010625"></script> 
+  <script src="static/js/vendor/jquery-3.2.1.js?v=1548842010625"></script> 
+  <script src="static/js/comm.js?v=1548842010625"></script>
   <script> 
  
   
@@ -218,14 +218,18 @@
       },
       data: function() {
           return {
-            isAjaxLock:false
+            isAjaxLock:false,
+            isasc:true
           }
       }, 
       extends: {
 
       },
       methods: {
-          
+          sort:function(){
+            var  self=this;
+            self.isasc=self.isasc==true?false:true
+          }
 
       }, 
       mounted: function() {
