@@ -11,7 +11,7 @@
 <body>
   <div class="header" id="header">
     <div class="header-bg">
-      <div class="logo fl"><a href="javascript:;"><img src="static/images/comm/logo.png?v=1548842010625"></a></div> 
+      <div class="logo fl"><a href="javascript:;"><img src="static/images/comm/logo.png?v=1549002403206"></a></div> 
       <div class="menu fl">
 
           <a href="javascript:;" class="active">
@@ -44,10 +44,10 @@
           <div class="language fl">
               <div class="selectCa">
                   
-                  <div class="val" @click="show_lang()"><img src="static/images/comm/chinese.jpg?v=1548842010625"></div>
+                  <div class="val" @click="show_lang()"><img src="static/images/comm/chinese.jpg?v=1549002403206"></div>
                   <div class="optionList" v-show="islang">
                       <div class="option" @click="set_lang('en')"><img src="static/images/comm/english.jpg"></div>
-                      <div class="option" @click="set_lang('zh-hans')"><img src="static/images/comm/chinese.jpg?v=1548842010625"></div>
+                      <div class="option" @click="set_lang('zh-hans')"><img src="static/images/comm/chinese.jpg?v=1549002403206"></div>
                   </div>
               </div>
           </div>
@@ -85,10 +85,50 @@
           <ul class="scrollbarArea">
             <li class="weaponItem">
               <div class="bg"></div>
-              <a class="btn-01" href="javascript:;">立即兑换</a>
+              <a @click="exchange()" class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img01.png?v=1548842010625">
+                  <img src="static/images/upload/list02-img01.png?v=1549002403206">
+              </div>
+              <div class="weaponName">Ak-47 Jungle Spray</div>
+              <div class="weaponPrice">￥121</div>
+            </li>
+            <li class="weaponItem">
+              <div class="bg"></div>
+              <a @click="exchange()" class="btn-01" href="javascript:;">立即兑换</a>
+              <div class="weaponR"><span>崭新出厂</span></div>
+              <div class="weaponImg">
+                  <img src="static/images/upload/list02-img02.png?v=1549002403206">
+              </div>
+              <div class="weaponName">Ak-47 Jungle Spray</div>
+              <div class="weaponPrice">￥121</div>
+            </li>
+            <li class="weaponItem">
+              <div class="bg"></div>
+              <a @click="exchange()" class="btn-01" href="javascript:;">立即兑换</a>
+              <div class="weaponR"><span>崭新出厂</span></div>
+              <div class="weaponImg">
+                  <img src="static/images/upload/list02-img03.png?v=1549002403206">
+              </div>
+              <div class="weaponName">Ak-47 Jungle Spray</div>
+              <div class="weaponPrice">￥121</div>
+            </li>
+            <li class="weaponItem">
+              <div class="bg"></div>
+              <a @click="exchange()" class="btn-01" href="javascript:;">立即兑换</a>
+              <div class="weaponR"><span>崭新出厂</span></div>
+              <div class="weaponImg">
+                  <img src="static/images/upload/list02-img04.png?v=1549002403206">
+              </div>
+              <div class="weaponName">Ak-47 Jungle Spray</div>
+              <div class="weaponPrice">￥121</div>
+            </li>
+            <li class="weaponItem">
+              <div class="bg"></div>
+              <a @click="exchange()" class="btn-01" href="javascript:;">立即兑换</a>
+              <div class="weaponR"><span>崭新出厂</span></div>
+              <div class="weaponImg">
+                  <img src="static/images/upload/list02-img05.png?v=1549002403206">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -98,7 +138,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img02.png?v=1548842010625">
+                  <img src="static/images/upload/list02-img06.png?v=1549002403206">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -108,7 +148,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img03.png?v=1548842010625">
+                  <img src="static/images/upload/list02-img07.png?v=1549002403206">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -118,7 +158,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img04.png?v=1548842010625">
+                  <img src="static/images/upload/list02-img08.png?v=1549002403206">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -128,47 +168,7 @@
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponR"><span>崭新出厂</span></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/list02-img05.png?v=1548842010625">
-              </div>
-              <div class="weaponName">Ak-47 Jungle Spray</div>
-              <div class="weaponPrice">￥121</div>
-            </li>
-            <li class="weaponItem">
-              <div class="bg"></div>
-              <a class="btn-01" href="javascript:;">立即兑换</a>
-              <div class="weaponR"><span>崭新出厂</span></div>
-              <div class="weaponImg">
-                  <img src="static/images/upload/list02-img06.png?v=1548842010625">
-              </div>
-              <div class="weaponName">Ak-47 Jungle Spray</div>
-              <div class="weaponPrice">￥121</div>
-            </li>
-            <li class="weaponItem">
-              <div class="bg"></div>
-              <a class="btn-01" href="javascript:;">立即兑换</a>
-              <div class="weaponR"><span>崭新出厂</span></div>
-              <div class="weaponImg">
-                  <img src="static/images/upload/list02-img07.png?v=1548842010625">
-              </div>
-              <div class="weaponName">Ak-47 Jungle Spray</div>
-              <div class="weaponPrice">￥121</div>
-            </li>
-            <li class="weaponItem">
-              <div class="bg"></div>
-              <a class="btn-01" href="javascript:;">立即兑换</a>
-              <div class="weaponR"><span>崭新出厂</span></div>
-              <div class="weaponImg">
-                  <img src="static/images/upload/list02-img08.png?v=1548842010625">
-              </div>
-              <div class="weaponName">Ak-47 Jungle Spray</div>
-              <div class="weaponPrice">￥121</div>
-            </li>
-            <li class="weaponItem">
-              <div class="bg"></div>
-              <a class="btn-01" href="javascript:;">立即兑换</a>
-              <div class="weaponR"><span>崭新出厂</span></div>
-              <div class="weaponImg">
-                  <img src="static/images/upload/list02-img07.png?v=1548842010625">
+                  <img src="static/images/upload/list02-img07.png?v=1549002403206">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -177,7 +177,7 @@
               <div class="bg"></div>
               <a class="btn-01" href="javascript:;">立即兑换</a>
               <div class="weaponImg">
-                  <img src="static/images/upload/card.png?v=1548842010625">
+                  <img src="static/images/upload/card.png?v=1549002403206">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -190,7 +190,7 @@
 
 
   <div class="footer">
-      <div class="logo fl"><a href="/"><img src="static/images/comm/logo.png?v=1548842010625"></a></div>
+      <div class="logo fl"><a href="/"><img src="static/images/comm/logo.png?v=1549002403206"></a></div>
       <div class="entrance fr">
           <a class="help" href="javascript:;"><i></i>帮助中心</a>
           <a class="terms" href="javascript:;"><i></i>使用条款</a>
@@ -204,11 +204,19 @@
           </span>
       </div>
   </div>
-  <script src="static/js/vendor/vue-2.4.2.js?v=1548842010625"></script> 
-  <script src="static/js/vendor/axios.min.js?v=1548842010625"></script> 
-  <script src="static/js/vendor/vee-validate.js?v=1548842010625"></script> 
-  <script src="static/js/vendor/jquery-3.2.1.js?v=1548842010625"></script> 
-  <script src="static/js/comm.js?v=1548842010625"></script>
+  <div class="dia-exchange none" id="dia-exchange">
+    <div class="weaponName"><i></i>Maroon Trucker Cap<em>崭新出厂</em></div>
+    <div class="weaponPrice">￥121</div>
+    <div class="weaponImg">
+        <img src="static/images/upload/list02-img07.png?v=1549002403206">
+    </div>
+  </div>
+  <script src="static/js/vendor/vue-2.4.2.js?v=1549002403206"></script> 
+  <script src="static/js/vendor/axios.min.js?v=1549002403206"></script> 
+  <script src="static/js/vendor/vee-validate.js?v=1549002403206"></script> 
+  <script src="static/js/vendor/jquery-3.2.1.js?v=1549002403206"></script> 
+  <script src="static/js/vendor/dialog.js?v=1549002403206"></script> 
+  <script src="static/js/comm.js?v=1549002403206"></script>
   <script> 
  
   
@@ -229,8 +237,18 @@
           sort:function(){
             var  self=this;
             self.isasc=self.isasc==true?false:true
-          }
+          },
+          exchange:function(){
+            dialog.open({
+              title:'',
+              style:'dia-exchange-m',
+              content:$('#dia-exchange'),
+              ok:{text:'确认',callback:function(){
 
+              }},
+              cancel:{text:'取消'}
+            })
+          }
       }, 
       mounted: function() {
           

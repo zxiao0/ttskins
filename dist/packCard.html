@@ -11,7 +11,7 @@
 <body>
   <div class="header" id="header">
     <div class="header-bg">
-      <div class="logo fl"><a href="javascript:;"><img src="static/images/comm/logo.png?v=1548746866926"></a></div> 
+      <div class="logo fl"><a href="javascript:;"><img src="static/images/comm/logo.png?v=1549002403206"></a></div> 
       <div class="menu fl">
 
           <a href="javascript:;" class="active">
@@ -44,10 +44,10 @@
           <div class="language fl">
               <div class="selectCa">
                   
-                  <div class="val" @click="show_lang()"><img src="static/images/comm/chinese.jpg?v=1548746866926"></div>
+                  <div class="val" @click="show_lang()"><img src="static/images/comm/chinese.jpg?v=1549002403206"></div>
                   <div class="optionList" v-show="islang">
                       <div class="option" @click="set_lang('en')"><img src="static/images/comm/english.jpg"></div>
-                      <div class="option" @click="set_lang('zh-hans')"><img src="static/images/comm/chinese.jpg?v=1548746866926"></div>
+                      <div class="option" @click="set_lang('zh-hans')"><img src="static/images/comm/chinese.jpg?v=1549002403206"></div>
                   </div>
               </div>
           </div>
@@ -67,7 +67,7 @@
     <div class="container">
       <div class="user-info" id="user-info">
         <div class="content">
-          <div class="user-head"><div class="img"><img src="static/images/upload/head2.png?v=1548746866926"></div>玩家用户名</div>
+          <div class="user-head"><div class="img"><img src="static/images/upload/head2.png?v=1549002403206"></div>玩家用户名</div>
           <div class="user-ye">
             <span>A币余额</span>
             <div class="price">¥<em>8.9</em></div>
@@ -114,7 +114,15 @@
               <div class="bg"></div>
               <div class="font" href="javascript:;">已读</div>
               <div class="weaponImg">
-                  <img src="static/images/upload/card.png?v=1548746866926">
+                  <img src="static/images/upload/card.png?v=1549002403206">
+              </div>
+              <div class="weaponName">Ak-47 Jungle Spray</div>
+              <div class="weaponPrice">￥121</div>
+            </li>
+            <li class="weaponItem" @click="showCard()">
+              <div class="bg"></div>
+              <div class="weaponImg">
+                  <img src="static/images/upload/card.png?v=1549002403206">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -122,7 +130,7 @@
             <li class="weaponItem">
               <div class="bg"></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/card.png?v=1548746866926">
+                  <img src="static/images/upload/card.png?v=1549002403206">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -130,7 +138,7 @@
             <li class="weaponItem">
               <div class="bg"></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/card.png?v=1548746866926">
+                  <img src="static/images/upload/card.png?v=1549002403206">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
@@ -138,25 +146,13 @@
             <li class="weaponItem">
               <div class="bg"></div>
               <div class="weaponImg">
-                  <img src="static/images/upload/card.png?v=1548746866926">
-              </div>
-              <div class="weaponName">Ak-47 Jungle Spray</div>
-              <div class="weaponPrice">￥121</div>
-            </li>
-            <li class="weaponItem">
-              <div class="bg"></div>
-              <div class="weaponImg">
-                  <img src="static/images/upload/card.png?v=1548746866926">
+                  <img src="static/images/upload/card.png?v=1549002403206">
               </div>
               <div class="weaponName">Ak-47 Jungle Spray</div>
               <div class="weaponPrice">￥121</div>
             </li>
           </ul>
-          <div class="card-info">
-            <div class="info"><label>卡号：</label><input id="card-num" readonly="" type="text" value="1234567890955"><a href="javascript:;" class="btn-01" id="cody-num" data-clipboard-target="#card-num" @click="Copy('#cody-num')">复制</a></div>
-            <div><label>密码：</label><input id="card-pass" readonly="" type="text" value="1234567890955"><a href="javascript:;" class="btn-01" id="cody-pass" data-clipboard-target="#card-pass" @click="Copy('#cody-pass')">复制</a></div>
-            <div><label></label>注：请妥善保管好您的卡密内容，已读商品仅自动保存7天</div>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -164,7 +160,7 @@
 
 
   <div class="footer">
-      <div class="logo fl"><a href="/"><img src="static/images/comm/logo.png?v=1548746866926"></a></div>
+      <div class="logo fl"><a href="/"><img src="static/images/comm/logo.png?v=1549002403206"></a></div>
       <div class="entrance fr">
           <a class="help" href="javascript:;"><i></i>帮助中心</a>
           <a class="terms" href="javascript:;"><i></i>使用条款</a>
@@ -174,16 +170,19 @@
           <span class="type">
               <i class="zfb"></i>
               <i class="wx"></i>
-              <i class="yl"></i>
+              <i class="yl"></i> 
           </span>
       </div>
   </div>
-  <script src="static/js/vendor/vue-2.4.2.js?v=1548746866926"></script> 
-  <script src="static/js/vendor/axios.min.js?v=1548746866926"></script> 
-  <script src="static/js/vendor/vee-validate.js?v=1548746866926"></script> 
-  <script src="static/js/vendor/jquery-3.2.1.js?v=1548746866926"></script> 
-  <script src="static/js/vendor/clipboard-2.0.0.js?v=1548746866926"></script> 
-  <script src="static/js/comm.js?v=1548746866926"></script>
+
+  
+  <script src="static/js/vendor/vue-2.4.2.js?v=1549002403206"></script> 
+  <script src="static/js/vendor/axios.min.js?v=1549002403206"></script> 
+  <script src="static/js/vendor/vee-validate.js?v=1549002403206"></script> 
+  <script src="static/js/vendor/jquery-3.2.1.js?v=1549002403206"></script> 
+  <script src="static/js/vendor/clipboard-2.0.0.js?v=1549002403206"></script> 
+  <script src="static/js/vendor/dialog.js?v=1549002403206"></script> 
+  <script src="static/js/comm.js?v=1549002403206"></script>
   <script> 
  
   
@@ -230,6 +229,36 @@
           var clipboard = new ClipboardJS(obj);
             clipboard.on("success", function(e) {
           })
+        },
+        showCard:function(){
+          dialog.open({
+            isObject:true,
+            title:'',
+            content:'<div class="dia-card" id="dia-card">'+
+    '<div class="tit">50元电信充值卡密</div>'+
+    '<div class="card-info">'+
+      '<div class="info"><label>卡号：</label><input id="card-num" readonly="" type="text" value="1234567890955"><a href="javascript:;" class="btn-01" id="cody-num" data-clipboard-target="#card-num" @click="Copy(\'#cody-num\')">复制</a></div>'+
+      '<div><label>密码：</label><input id="card-pass" readonly="" type="text" value="1234567890955"><a href="javascript:;" class="btn-01" id="cody-pass" data-clipboard-target="#card-pass" @click="Copy(\'#cody-pass\')">复制</a></div>'+
+      '<div><label></label>注：请妥善保管好您的卡密内容，已读商品仅自动保存7天</div>'+
+    '</div>'+
+  '</div>'
+          })
+
+          var card_vm=new Vue({
+            el:'#dia-card',
+            data: function() {
+                return {
+                  isAjaxLock:false
+                }
+            }, 
+            methods: {
+                Copy: function(obj) {
+                  var clipboard = new ClipboardJS(obj);
+                    clipboard.on("success", function(e) {
+                  })
+                }
+              }
+          })
         }
       }, 
       mounted: function() {
@@ -237,6 +266,8 @@
     
       }
   })
+
+  
   </script>
 </body>
 </html>
