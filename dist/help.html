@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <title>帮助中心</title>   
+    <link rel="stylesheet" type="text/css" href="static/css/app.css" /> 
+</head>
+<body>
+  <div class="header" id="header">
+    <div class="header-bg">
+      <div class="logo fl"><a href="javascript:;"><img src="static/images/comm/logo.png?v=1550565027950"></a></div> 
+      <div class="menu fl">
+
+          <a href="javascript:;" class="active">
+              <span class="img">
+                  <span class="icon boxIcon"></span>
+              </span>
+              <span>箱子</span>
+          </a>
+
+          <a href="javascript:;">
+              <span class="img">
+                  <span class="icon CFIcon"></span>
+              </span>
+              <span>众筹</span>
+          </a>
+          <a href="javascript:;">
+              <span class="img">
+                  <span class="icon rollIcon"></span>
+              </span>
+              <span>ROLL</span>
+          </a>
+          <a href="javascript:;">
+              <span class="img">
+                  <span class="icon MALLIcon"></span>
+              </span>
+              <span>商城</span>
+          </a>
+      </div>
+      <div class="shortcut fr">
+          <div class="language fl">
+              <div class="selectCa">
+                  
+                  <div class="val" @click="show_lang()"><img src="static/images/comm/chinese.jpg?v=1550565027950"></div>
+                  <div class="optionList" v-show="islang">
+                      <div class="option" @click="set_lang('en')"><img src="static/images/comm/english.jpg?v=1550565027950"></div>
+                      <div class="option" @click="set_lang('zh-hans')"><img src="static/images/comm/chinese.jpg?v=1550565027950"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="user fl">
+              
+              <div class="discard">
+                  <a href="javascript:void 0;" id="login_page">登录</a>
+                  <a href="javascript:void 0;" id="reg_page">注册</a>
+              </div>
+              
+          </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="member">
+    <div class="container">
+      
+      <div class="member-tit"><span>帮助中心</span>Help center</div>
+      <div class="clearfix">
+     
+      <div class="help-left">
+        <ul>
+          <li><a class="active" href="javascript:;">饰品取回</a></li>
+          <li><a href="javascript:;">STEAM无法访问使用</a></li>
+          <li><a href="javascript:;">STEAM账号不能交易</a></li>
+        </ul>
+      </div>
+      <div class="help-right">
+        <h3>兑换商城饰品取回</h3>
+        <p>注意：目前仅商城饰品支持取回到steam库。商城饰品使用B币兑换。</p>
+        <h3>一、 什么是B币？</h3>
+        <p>B币是TTSKINS站商城的流通货币， 用于购买商城的饰品和物品。购买的饰品均可取回到自己的steam.(注意：目前只有商城里面的饰品可以进行取回）</p>
+        <h3>二、 如何获取B币？</h3>
+        <p>B币仅来源于开箱的B币售出转换 （有两个地方可以选择出售转换成B币)<br>
+        1.是开箱的当下选着B币转换.<br>
+        2.在“我的物品“里选择集中转换成B币. <br>（点击如图所示”取回商城饰品”或横向导航“兑换商城”前往TTSKINS站商城。）.</p>
+        <h3>三、达到兑换商城使用流程须知.</h3>
+        <p>1.点击购物城进行结算，支付B币<br>
+        2.兑换背包中选择取回的饰品，发送交易报价---取回<br>
+        3.前往自己的steam库接受饰品</p>
+        
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer">
+      <div class="logo fl"><a href="/"><img src="static/images/comm/logo.png?v=1550565027950"></a></div>
+      <div class="entrance fr">
+          <a class="help" href="javascript:;"><i></i>帮助中心</a>
+          <a class="terms" href="javascript:;"><i></i>使用条款</a>
+      </div>
+      <div class="payType fl">
+          <span class="tit"><i></i>支付方式：</span>
+          <span class="type">
+              <i class="zfb"></i>
+              <i class="wx"></i>
+              <i class="yl"></i>
+          </span>
+      </div>
+  </div>
+
+
+  <div class="dia-ewm none" id="dia-ewm">
+    <h2>扫码支付</h2>
+    <div class="ewm"><img src="static/images/ewm.png?v=1550565027950"></div>
+    <div class="info">充值金额：<span>46.80</span>元</div>
+  </div>
+  <script src="static/js/vendor/vue-2.4.2.js?v=1550565027950"></script> 
+  <script src="static/js/vendor/axios.min.js?v=1550565027950"></script> 
+  <script src="static/js/vendor/vee-validate.js?v=1550565027950"></script> 
+  <script src="static/js/vendor/jquery-3.2.1.js?v=1550565027950"></script> 
+  <script src="static/js/vendor/dialog.js?v=1550565027950"></script> 
+  <script src="static/js/vendor/clipboard-2.0.0.js?v=1550565027950"></script> 
+  <script src="static/js/comm.js?v=1550565027950"></script>
+  <script> 
+ 
+  
+  new Vue ({
+      el: "#user-info",
+      components: {
+      },
+      data: function() {
+          return {
+            isAjaxLock:false
+          }
+      }, 
+      extends: {
+
+      },
+      methods: {
+          Copy: function() {
+            var clipboard = new ClipboardJS("#referrals-btn");
+              clipboard.on("success", function(e) {
+            })
+          }
+
+      }, 
+      mounted: function() {
+          
+    
+      }
+  })
+
+  new Vue ({
+      el: "#voucherCenter",
+      components: {
+      },
+      data: function() {
+          return {
+            isAjaxLock:false 
+          }
+      }, 
+      extends: {
+
+      },
+      methods: {
+          pay:function(){
+            dialog.open({
+              title:'',
+              content:$('#dia-ewm')
+              
+            })
+          }
+      }, 
+      mounted: function() {
+          
+    
+      }
+  })
+  </script>
+</body>
+</html>
